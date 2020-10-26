@@ -12,13 +12,23 @@
 ```js
 //index.js
 document.write('hello world');
+// js中以分号作为语句结束 如果独占一行则可以省略分号(通常不建议省略分号)
+var a= 1;var b =2
+var a =1
 ```
 
-2. 定义变量 var 通过一个等号把等号右边的值赋值给等号左边 为了标记一个值 js 的执行顺序从上往下 后定义变量会覆盖前面的 js 严格区分大小写
-
+2. 变量 Variable  可变的量  存储一个值 定义变量可以用var 如果定义变量不赋值 变量的值是undefind  
+ - 命名规则 必须以字母、下划线_、美元符号($)开头,后面可以有数字
 ```js
+// 定义变量 
+var a 
+console.log(a)// 结果是undefind
+// 错误示例 var 1 
+// 正确示例
 var a = 1;
 var A = 1;
+var $a =3
+var _a =4
 var hu = 'aaaaaaa';
 ```
 
@@ -130,8 +140,6 @@ if (name == 'lilei') {
   3）函数 Function 
  
 6. 条件语句 if else if 后面括号跟的值返回的是一定是 true 或者 false if 可以独立使用 if else if 只要有一个条件成立就不在继续往下走了
-
-
 ```js
 if (条件js) {
   //条件成立
@@ -153,6 +161,18 @@ if (c > 9) {
   alert('第四个条件');
 }
 ```
+-  三元表达式 if else的简化版 
+   条件？条件成立的执行语句:条件不成立的执行语句
+```js
+ var age = 19
+ age>=18?document.write('成年'):document.write('未成年')
+ var  money = 200
+ // 函数里面如果有三元 return需要在语句的最前面 
+ function str(){
+    return money>100?'买的起':'买不起'
+ }
+ str()
+``` 
 7. js 中 = 和 == 的区别
 
 ```js
@@ -201,7 +221,72 @@ funciton a(){
 a() // a执行的结果就是1  
 ```
 10. 作用域  
-    - 全局变量  都可以访问 
-    - 局部变量  只在函数内部可以访问 在函数内部使用var声明的是局部变量  
+    - 全局变量(班费) 都可以访问 
+    - 局部变量(自己的钱) 只在函数内部可以访问 在函数内部使用var声明的是局部变量 
+11. for 循环 批量处理数据
+```js
+for(初始化条件;终止(退出)条件；最终条件)
+++自增运算符 每次会自动加1 
+for(var i=0;i<10;i++){
+  //执行语句
+  console.log(i) //0 1
+}
+```
 
-  
+## 数据类型 以及各种数据类型常用方法 
+1. 字符串   
+- 创建 
+```js
+  var str  = 'hello'
+  //通过构造函数创建
+  var str = new String('hello')
+```
+- 字符串的属性 
+  长度 length
+  创建字符串的构造函数  constructor  
+  指向函数的原型      prototype
+- 字符串的方法  charAt()和 charCodeAt()
+- charAt(数字)  表示截取字符串中的一个的哪个索引
+   ```js
+    var str  = 'hello'
+    str.charAt(0)
+   ``` 
+- concat 拼接 把两个字符串拼在一起 
+```js
+ var str  = 'hello'
+ var str2= 'world'
+ var str3  = str.concat(str2)
+```
+- slice/substr/substring 截取字符串的多个 
+两个参数 第一个参数表示从哪截取 第二个参数表示截取到哪个索引 (包前不包后) 
+如果只传一个参数 表示从当前索引截取到末尾 
+```js
+ var  str = 'hello'
+ var  str1  = str.slice(0,2) //he
+ var  str1  = str.slice(2) //llo 
+ var str2  = str.substr(0,2)
+```  
+- indexOf 和 lastIndexOf 或者字符串的索引 
+  indexof   该字符第一次出现的索引 
+  lastIndexOf 该字符最后一次出现的索引
+  如果检测不到索引 则返回-1 (该字符串没有此字符)
+  ```js
+    var str = 'hello'
+    console.log(str.indexOf('l')) //2
+    console.log(str.lastIndexOf('l')) //3
+    var n= '李先生'
+    console.log(n.indexOf('王'))
+  ```
+- trim() 字符串去除前后的空格
+ ```js
+  var n = '李小姐 '
+  var res = n.trim()
+  console.log(res)
+ ```
+ - 字符转换大小写 toUpperCase 转大写  toLowerCase 转小写 
+  ```js
+    var a = 'english'
+    var l = a.toUpperCase() // 'ENGLISH'
+    var m = l.toLowerCase() //'english'
+    console.log(l,m)
+  ```
