@@ -1,7 +1,6 @@
 ## js 基础
 
 1. js 使用
-
 - 内联 两个 body 中间靠下
 <script>
  //js语言 
@@ -250,6 +249,8 @@ for(var i=0;i<10;i++){
    ```js
     var str  = 'hello'
     str.charAt(0)
+    
+    str[0]
    ``` 
 - concat 拼接 把两个字符串拼在一起 
 ```js
@@ -290,3 +291,23 @@ for(var i=0;i<10;i++){
     var m = l.toLowerCase() //'english'
     console.log(l,m)
   ```
+2. 数字类型 Number 正数、负数、小数、0 无穷大 Infinity  NaN
+- NaN 表示不是一个有效数字,NaN和任何值都不相等 
+- Number([value]) Parseint([vaule]) Parsefloat([valvue])
+- Number会把其他类型强制转化成数字类型 
+1). 字符串转数字 一旦字符串中出现非有效数字则会转成NaN,只有字符串中都是有效数字才会转成数字  空字符串转化为0 
+2). 布尔类型转数组 true -> 1  false->0 
+```js
+ console.log(Number(true)) //1
+ console.log(Number(false)) //0 
+```
+3). null转数字,结果是0
+```js
+ console.log(Number(null)) //0 
+```
+4). symbol不能转数字，否则会报错
+5). 函数和undefind转数字，结果是NaN
+6）. 对象转数字 先把对象转成字符串(toString()内置方法)，再把字符串转成数字
+    - 普通对象 {name:lili}
+    - 数组对象 [12] 
+    - 其他对象  都是NaN
