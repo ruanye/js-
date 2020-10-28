@@ -231,7 +231,22 @@ for(var i=0;i<10;i++){
   console.log(i) //0 1
 }
 ```
-
+- break 直接跳出当前循环 并不在进行下次循环   
+- continue 直接跳出当前循环 并进行下次循环
+```js
+var ary1 = [1,2,3,4,5,6,17,19,30]
+// 1. 计算除了17之外其他数的和 
+// 2. 计算 17之前所有数的和 
+var sum= 0;
+for(var i=0;i<ary1.length;i++){
+  if(ary1[i]==17){
+		//continue 1
+		break   //2
+	}
+	sum =sum+ary1[i]
+}
+console.log(sum)
+```
 ## 数据类型 以及各种数据类型常用方法 
 1. 字符串   
 - 创建 
@@ -311,3 +326,52 @@ for(var i=0;i<10;i++){
     - 普通对象 {name:lili}
     - 数组对象 [12] 
     - 其他对象  都是NaN
+- isNaN 判断这个数字是不是非有效数字 true/false 如果是非有效数字返回true
+- parseInt(转整数)/parseFloat(转小数，只转化第一个小数点)
+ - 字符串  如果开头是数字 只转换有效整数部分 其他会直接忽略 如果开头不是数字 会转成NaN
+ - 其他类型转换 先转成字符串 在转成数字 
+ - fixed(n) 表示取n位小数，不够的话自动补0
+ 3. 布尔值 
+ 只有undefind,null,0,NaN,'' 在转化成布尔值的时候会被转化成false 
+4. 数组  内置对象 存储多个不同类型的数据 
+1） 使用构造函数创建数组
+```js
+  var ary  = new Array() //空数组
+  var ary1 = new Array(10) //确定长度为10的数组
+  var ary2 = new Array(0,'zhangsan',true)
+```
+2）使用字面量创建数组
+```js
+  var  arry = []
+  var arry = [1,2,3]
+```
+- 数组的访问  取值和赋值(通过索引)
+```js
+//取值
+ var  ary = [1,2,3]
+ console.log(ary[1])
+ //赋值
+  ary[1] = 4
+```
+- for 循环遍历数组
+```js
+var ary = ['张三','李四','王五','王六','王7']
+for(var i=0;i<ary.length;i++){
+		ary[i] = '一班的'+ary[i]
+}
+```
+- 数组的长度  length 数组长度的添加 默认值undefind
+- 数组长度的减少 会删除多余的元素  
+- 数组的常用方法
+  1. join(符号) 数组转字符串，字符串会以join里面的字符串进行连接  如果不传值会以，号进行连接 不改变原数组
+  2. push 把数组里面添加元素 位置是数组的后面
+  3. pop() 删除数组最后一项 
+     shift() 删除数组的第一项
+  4. unshift 往数组的最前面添加元素
+  5. reverse() 数组倒序 
+  6. concat 合并数组 会把两个数组合并 不修改原数组 
+  
+  
+
+
+
