@@ -485,7 +485,20 @@ console.log(sum)
     obj.key 进行赋值的时候 如果有这个属性值 会直接进行修改 如果没有就是添加 
   - 删除  delete 如果被delele删除掉或者没有这个属性会返回undefined
   - 假删除 obj[key] = null
-  
+## 第一种判断数据类型的方式typeof 
+```js 
+// 数组和null通过typeof检测出来是对象object
+console.log(typeof(1))  //number 
+console.log(typeof('hello')) //string
+console.log(typeof(true)) //boolean 
+ console.log(typeof(undefined)) //undefined
+console.log(typeof(Symbol('1'))) //symbol
+console.log(typeof(function(){})) //function 
+console.log(typeof([1,2,3,4]))// object 
+console.log(typeof(null))    //object
+console.log(typeof({name:'lili'})) //Object
+```
+## 第二种判断数据类型的方式  Object.prototype.toString.call 返回值是个字符串 '[Object 数据类型]'
   
 
 

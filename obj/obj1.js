@@ -5,12 +5,9 @@ var carList= [
 	{name:'榴莲',price:3.5,num:1},
 	{name:'菠萝',price:2.3,num:8}
 ]
-console.log(carList[0])
-console.log(carList[1])
-console.log(carList[2])
-console.log(carList[3])
-var sum = 0 
-for(var i =0;i<carList.length;i++){
-	 sum = sum+ carList[i].price*carList[i].num 
-}
-console.log(sum)
+//第一次的返回值  3*30+3.3*5  下次的prev 
+// 106.5 prev 
+var total = carList.reduce(function(prev,next){
+   return prev +next.price*next.num
+},0)
+console.log(total)
