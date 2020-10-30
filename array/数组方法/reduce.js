@@ -9,10 +9,12 @@ var arr = [1,2,3,4]
 // 第三次 prev 6 
 // 最后一次会作为整个函数的返回值 10 
 // 咖啡 ->加糖的咖啡->加糖加盐的咖啡 
+/**
+ * prev  每一次的返回值会作为下一次的prev 
+ * next 从数组的第二项开始 
+ */
 var sum  = arr.reduce(function(prev,next,index,array){
-	console.log(prev)
-	console.log(next) // 2 3 4 
-  return  prev+next
+	return  prev+next
 })
 console.log(sum)
 // 
