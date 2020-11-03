@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>这是tilte</title>
+</head>
+<body>
+	 <div>
+		 <a id="a" href="//">跳转</a>
+		 <img src="" alt="">
+		 <span a='a'></span>
+	 </div>
+	 <script>
+	   var  text  = document.createTextNode('这是一个a标签')
+		 
+		 var taga = document.getElementById('a') 
+		  taga.appendChild(text)
+		  console.log( taga.getAttribute('href'))
+			taga.setAttribute('href','https://www.baidu.com/')
+			taga.setAttribute('class','abc')
+	 </script>
+</body>
+</html>

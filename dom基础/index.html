@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.c{
+			background:red;
+		}
+	</style>
+</head>
+<body>
+	 <div id='mydiv' class="a b " a=1>这是一个div
+		 <a href=""></a>
+		 <img src="">
+		 <div id="my">1234</div>
+		 <ul>
+			 <li>1</li>
+			 <li>2</li>
+			 <li>3</li>
+		 </ul>
+	 </div>
+	 <div class="c">内容1</div>
+	 <div class="c">内容</div>
+	 <div class="c">内容</div>
+	 <div class="c">内容</div>
+	 <div class="c">内容</div>
+	<script>
+     var p = document.createElement('p')
+		 p.innerHTML  =  'p标签'
+		var  my = document.getElementById('mydiv')
+	//	my.appendChild(p)
+	var ul  = document.getElementsByTagName('ul')[0]
+	 var odiv  = document.getElementById('my')
+	//  my.innerHTML = 'my的id是 '+my.id+''+'my的className是 '+my.className+''
+	//  my.className += 'c'
+	console.log(my.innerHTML,'内容')
+	console.log(odiv.parentNode)
+  /
+  // my.insertBefore(p,odiv)
+	 // 删除1234这个div 
+	 // my.removeChild(odiv)
+		//document.body.removeChild(my)
+	</script>
+</body>
+</html>
