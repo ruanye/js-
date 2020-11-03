@@ -259,7 +259,8 @@ immediately(立即) Invoked(调用的) Function(函数) Expression(表达式)
 10. 作用域
     - 全局变量(班费) 都可以访问
     - 局部变量(自己的钱) 只在函数内部可以访问 在函数内部使用 var 声明的是局部变量
-11. for 循环 批量处理数据
+11. 循环
+- for 循环 批量处理数据
 
 ```js
 for(初始化条件;终止(退出)条件；最终条件)
@@ -287,6 +288,20 @@ for (var i = 0; i < ary1.length; i++) {
 }
 console.log(sum);
 ```
+- do...while 和 while 
+```js
+ // 基本写法  
+ do {
+   stament 
+ } while(condition){}
+ // 会创建一个指定语句进行循环，直到while里面的条件（condition）为false的时候结束 do里面的语句会最少执行一次 
+ while(condition){
+   stament
+ }
+ // 会创建一个指定语句进行循环，直到while里面的条件（condition）为false的时候结束
+```
+ - 注意事项 while里面的条件语句不能一直为真(true)，否则会造成死循环(无限执行) 
+
 ##  js运算符 
   % 模（取余数） 3/2 1 3/3 0
   ++  自增运算符  
@@ -500,6 +515,9 @@ console.log(typeof({name:'lili'})) //Object
 ```
 ## 第二种判断数据类型的方式  Object.prototype.toString.call 返回值是个字符串 '[Object 数据类型]'
   
+## 闭包
+## 作用域链
+## 原型和原型链 
 
 
 
