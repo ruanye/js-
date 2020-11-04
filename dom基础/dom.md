@@ -1,5 +1,4 @@
 ## dom 编程
-
 - 查询浏览器兼容 https://www.caniuse.com/
   dom 的定义： Document Object Model：文档对象模型
 
@@ -81,3 +80,22 @@ element.setAttribute('属性值','属性名')
 ## 文本节点 
 标签中的文字叫做文本节点  
 创建文本节点 document.createTextNode(文字)
+## 事件 
+1. 鼠标事件 
+鼠标点击  onclick
+```js
+// 点击隐藏/显示
+```
+鼠标双击 ondblclick  db=>double的缩写
+鼠标移到某元素之上  onmouseover
+鼠标指针移动到元素之上 onmouseenter 
+鼠标指针离开元素 onmouseleave 
+鼠标按钮被按下  onmousedown  
+鼠标按钮被抬起  onmouseup  
+2. 键盘事件  键盘的每一个按键都有自己的keycode
+onkeydown 键盘被按下 
+onkeyup   键盘被抬起
+onkeypress 键盘被按下并且抬起
+3.  
+          
+

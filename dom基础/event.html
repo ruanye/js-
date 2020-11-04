@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	 <button ondblclick="fn('abc')">点击我</button>
+	 <input id="inp" placeholder="请输入用户名" onkeyup="myfn(event)"/>
+	 <div id='a'></div>
+	 <script>
+		 // var xx = 'abc'
+		function fn(xx){
+			alert(xx)
+		}
+		var inp = document.getElementById('inp')
+		//var a = document.getElementById('a')
+		// id值会挂在window 我们能直接使用id值 
+		function myfn(e){
+			console.log(e)
+			console.log(e)
+			  a.innerHTML = inp.value
+		}
+	 </script>
+</body>
+</html>

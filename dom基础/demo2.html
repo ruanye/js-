@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>点击显示隐藏案例</title>
+    <style>
+      .my {
+        width: 300px;
+        height: 300px;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my" id="my"  onclick="sh(this)"></div>
+    <button id="btn">点击隐藏</button>
+    <script>
+      var my = document.getElementById('my');
+      var btn = document.getElementById('btn');
+      btn.onclick = function () {
+        if (my.style.display == 'none') {
+          my.style.display = 'block';
+          this.innerHTML = '点击隐藏';
+        } else {
+          my.style.display = 'none';
+          this.innerHTML = '点击显示';
+        }
+      };
+
+      // 定义一个函数来实现隐藏/显示功能
+      // this 是函数执行的上下文
+      function sh(btobj) {
+         console.log(btobj,this)
+        return
+        if (my.style.display == 'none') {
+          my.style.display = 'block';
+          btobj.innerHTML = '点击隐藏';
+        } else {
+          my.style.display = 'none';
+          btobj.innerHTML = '点击显示';
+        }
+      }
+    </script>
+  </body>
+</html>

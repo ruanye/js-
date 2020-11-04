@@ -514,6 +514,11 @@ console.log(typeof(null))    //object
 console.log(typeof({name:'lili'})) //Object
 ```
 ## 第二种判断数据类型的方式  Object.prototype.toString.call 返回值是个字符串 '[Object 数据类型]'
+## this  
+- this表示函数执行上下文 
+- this 和在哪里定义无关只和执行有关 
+- 直接定义的函数 this->window (浏览器环境)
+- 判断函数前面有没有 . 如果有. this就是方法前面的对象 
   
 ## 闭包
 ## 作用域链
