@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todolist案例</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      .inbox {
+        text-align: center;
+      }
+      .inbox input,
+      .inbox button {
+        display: inline-block;
+      }
+      .ctx {
+        padding: 20px;
+        width: 400px;
+        margin: 0 auto;
+        background-color: #e3e3e3;
+      }
+      ul {
+        width: 400px;
+      }
+      h2 {
+        width: 400px;
+      }
+      li {
+        width: 400px;
+        position: relative;
+        height: 30px;
+      }
+      .rm {
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        text-align: center;
+        border: 6px double #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inbox">
+      <input class="inp" placeholder="请输入内容" />
+      <button onclick="add()">添加待办事项</button>
+    </div>
+    <div class="ctx">
+      <h2>正在进行</h2>
+      <ul id="todolist"></ul>
+    </div>
+    <script>
+      //获取input元素
+      let inp = document.getElementsByClassName('inp')[0];
+      // 获取列表的ul
+      let list = document.getElementById('todolist');
+      // 定义button的点击事件
+      function add() {
+        //1 点击时候获取input的value
+        let text = inp.value;
+        console.log(text);
+        //2 需要给ul 增加一个li 里面的内容是我们输入的内容
+        let li = document.createElement('li');
+        li.innerHTML = text + '<span class="rm">-</span>';
+        // 3 需要把新增的li 扔到ul节点里面
+        list.appendChild(li);
+        // 4 把input内容清空
+        inp.value = '';
+        let spans = document.getElementsByTagName('span');
+       // span 有多个 每一个span都需要绑定事件
+        for (let i = 0; i < spans.length; i++) {
+          // 获取每一个span
+          let span = spans[i];
+          span.onclick = function () {
+            // 获取span的父亲li
+            let parent = this.parentNode;
+            list.removeChild(parent);
+          };
+        }
+      }
+    </script>
+  </body>
+</html>
