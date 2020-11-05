@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>表单事件</title>
+</head>
+<body> 
+	 <input placeholder="请输入" onfocus="fcu()" onblur="bl()" oninput='changv(event)'/>
+	 <script>
+		 function fcu(){
+		  console.log('获取焦点')
+		 }
+		 function bl(){
+			 console.log('失去焦点')
+		 }
+		 function changv(e){
+			 // e.target 会指向当前触发事件的元素
+			   console.log(e.target.value)
+		 }
+	 </script>
+</body>
+</html>

@@ -96,7 +96,15 @@ element.setAttribute('属性值','属性名')
 onkeydown 键盘被按下 
 onkeyup   键盘被抬起
 onkeypress 键盘被按下并且抬起
-3.  
+3. 其他事件
+  onload  页面或者图片加载完成 
+  onscroll 窗口或者元素滚动时候触发  
+  onresize 窗口或者框架被调整大小 
+4. 表单事件 
+   获取焦点 onfocus 
+   失去焦点 onblur 
+   表单内容发生改变  onchange  失去焦点的的时候才能监听到
+   表单内容改变  oninput 实时监听表单内容
 ## 事件案例 
           
 

@@ -519,6 +519,7 @@ console.log(typeof({name:'lili'})) //Object
 - this 和在哪里定义无关只和执行有关 
 - 直接定义的函数 this->window (浏览器环境)
 - 判断函数前面有没有 . 如果有. this就是方法前面的对象 
+- 事件中的this this指向了接收事件的html元素 
   
 ## 闭包
 ## 作用域链
