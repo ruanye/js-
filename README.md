@@ -500,6 +500,14 @@ console.log(sum)
     obj.key 进行赋值的时候 如果有这个属性值 会直接进行修改 如果没有就是添加 
   - 删除  delete 如果被delele删除掉或者没有这个属性会返回undefined
   - 假删除 obj[key] = null
+## Math 对象   Math是 JavaScript 的原生对象，提供各种数学功能。该对象不是构造函数，不能生成实例，所有的属性和方法都必须在Math对象上调用
+- Math.abs() 绝对值
+- Math.ceil()  向上取整 天花板值
+- Math.floor() 向下取整 地板值 
+- Math.round() 四舍五入
+- Math.max() 最大值
+- Math.min() 最小值
+- Math.random() 0-1之间的任意小数 可以是0不包含1 
 ## 第一种判断数据类型的方式typeof 
 ```js 
 // 数组和null通过typeof检测出来是对象object
